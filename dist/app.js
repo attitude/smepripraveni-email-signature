@@ -203,7 +203,7 @@ function App() {
           ),
           React.createElement(
             'table',
-            { border: '0', cellPadding: '0', cellSpacing: '0', width: '200px' },
+            { border: '0', cellPadding: '0', cellSpacing: '0' },
             React.createElement(
               'tbody',
               null,
