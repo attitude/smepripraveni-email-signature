@@ -23,6 +23,18 @@ function App() {
       email = _React$useState8[0],
       setEmail = _React$useState8[1];
 
+  React.useEffect(function () {
+    var signature = document.getElementById('signature');
+    var html = document.getElementById('html');
+
+    if (!signature || !html) {
+      return;
+    }
+
+    console.log(signature.innerHTML);
+    html.innerText = signature.innerHTML;
+  }, [name, position, phoneNumber, email]);
+
   var onNameChange = React.useCallback(function (event) {
     return setName(event.target.value);
   });
@@ -159,7 +171,7 @@ function App() {
         { className: 'select-here' },
         React.createElement(
           'div',
-          { contentEditable: true, className: 'panel_content' },
+          { id: 'signature', contentEditable: true, className: 'panel_content' },
           React.createElement(
             'p',
             null,
@@ -245,7 +257,60 @@ function App() {
             )
           )
         )
-      )
+      ),
+      React.createElement('hr', null),
+      React.createElement(
+        'p',
+        { 'class': 'hint' },
+        'PS: Podpisy pre Gmail cez web maj\xFA bug a nefunguj\xFA, sk\xFAste pros\xEDm pou\u017E\xEDva\u0165 Gmail s inou appkou, kde je mo\u017En\xE9 podpis zada\u0165 priamo ni\u017E\u0161ie uveden\xE9 HTML ako napr.:'
+      ),
+      React.createElement(
+        'ul',
+        { 'class': 'hint' },
+        React.createElement(
+          'li',
+          null,
+          React.createElement(
+            'a',
+            {
+              target: '_blank',
+              href: 'https://sparkmailapp.com/'
+            },
+            'Spark pre iOS, Android, Mac'
+          ),
+          '; n\xE1vod na ',
+          React.createElement(
+            'a',
+            {
+              target: '_blank',
+              href: 'https://sparkmailapp.com/how-to-add-signature-ios'
+            },
+            'nastavenie podpisu'
+          )
+        ),
+        React.createElement(
+          'li',
+          null,
+          React.createElement(
+            'a',
+            {
+              target: '_blank',
+              href: 'https://www.thunderbird.net/'
+            },
+            'Thunderbird pre Mac, Win a Linux'
+          ),
+          '; n\xE1vod na ',
+          React.createElement(
+            'a',
+            {
+              target: '_blank',
+              href: 'https://support.mozilla.org/en-US/kb/signatures#w_html-signatures'
+            },
+            'nastavenie podpisu'
+          )
+        )
+      ),
+      React.createElement('textarea', { id: 'html', 'class': 'select-here' })
     )
   );
 }

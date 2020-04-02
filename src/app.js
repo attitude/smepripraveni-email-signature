@@ -6,6 +6,23 @@ function App () {
   const [phoneNumber, setPhoneNumber] = React.useState('')
   const [email, setEmail] = React.useState('')
 
+  React.useEffect(() => {
+    const signature = document.getElementById('signature')
+    const html = document.getElementById('html')
+
+    if (!signature || !html) {
+      return
+    }
+
+    console.log(signature.innerHTML)
+    html.innerText = signature.innerHTML
+  }, [
+    name,
+    position,
+    phoneNumber,
+    email,
+  ])
+
   const onNameChange = React.useCallback((event) => setName(event.target.value))
   const onPositionChange = React.useCallback((event) => setPosition(event.target.value))
   const onPhoneNumberChange = React.useCallback((event) => setPhoneNumber(event.target.value))
@@ -79,10 +96,9 @@ function App () {
           >Win 10</a>, <a
             target="_blank"
             href="https://support.apple.com/en-gb/guide/mail/mail11943/mac"
-          >Mac</a>)
-        </p>
+          >Mac</a>)</p>
         <div className="select-here">
-          <div contentEditable={true} className="panel_content">
+          <div id="signature" contentEditable={true} className="panel_content">
             <p>S pozdravom</p>
             <p style={{lineHeight: '1.5em' }}>
               {name}
@@ -103,6 +119,29 @@ function App () {
             </tr></tbody></table>
           </div>
         </div>
+        <hr />
+        <p class="hint">PS: Podpisy pre Gmail cez web majú bug a nefungujú, skúste prosím používať Gmail s inou appkou, kde je možné podpis zadať priamo nižšie uvedené HTML ako napr.:</p>
+        <ul class="hint">
+          <li>
+            <a
+              target="_blank"
+              href="https://sparkmailapp.com/"
+            >Spark pre iOS, Android, Mac</a>; návod na <a
+              target="_blank"
+              href="https://sparkmailapp.com/how-to-add-signature-ios"
+            >nastavenie podpisu</a>
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="https://www.thunderbird.net/"
+            >Thunderbird pre Mac, Win a Linux</a>; návod na <a
+              target="_blank"
+              href="https://support.mozilla.org/en-US/kb/signatures#w_html-signatures"
+            >nastavenie podpisu</a>
+          </li>
+        </ul>
+        <textarea id="html" class="select-here"></textarea>
       </div>
     </div>
   )

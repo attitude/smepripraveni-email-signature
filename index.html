@@ -5,6 +5,10 @@
     <title>Signatures</title>
     <link rel="stylesheet" href="./assets/normalize.min.css" type="text/css" media="all">
     <style>
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
 html, body, #app {
   height: 100%;
   font-family: sans-serif;
@@ -51,6 +55,15 @@ input {
   padding: 10px;
 }
 
+hr {
+  border: none;
+  height: 1px;
+  /* Set the hr color */
+  color: #999; /* old IE */
+  background-color: #999; /* Modern Browsers */
+  margin: 4em 0;
+}
+
 .hint {
   color: grey;
   font-size: 0.825em;
@@ -67,6 +80,13 @@ input {
   border: 2px dashed #999;
   border-radius: 20px;
   padding: 20px;
+}
+
+#html {
+  font-family: monospace;
+  overflow: scroll;
+  width: 100%;
+  height: 30%;
 }
 
 @media (min-width: 640px) {
