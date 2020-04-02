@@ -8,17 +8,17 @@ function App() {
       name = _React$useState2[0],
       setName = _React$useState2[1];
 
-  var _React$useState3 = React.useState('coordinator of happiness'),
+  var _React$useState3 = React.useState(''),
       _React$useState4 = _slicedToArray(_React$useState3, 2),
       position = _React$useState4[0],
       setPosition = _React$useState4[1];
 
-  var _React$useState5 = React.useState('+421 949 900 900'),
+  var _React$useState5 = React.useState(''),
       _React$useState6 = _slicedToArray(_React$useState5, 2),
       phoneNumber = _React$useState6[0],
       setPhoneNumber = _React$useState6[1];
 
-  var _React$useState7 = React.useState('kontakt@smepripraveni.sk'),
+  var _React$useState7 = React.useState(''),
       _React$useState8 = _slicedToArray(_React$useState7, 2),
       email = _React$useState8[0],
       setEmail = _React$useState8[1];
@@ -113,7 +113,7 @@ function App() {
       React.createElement(
         'p',
         { 'class': 'hint' },
-        '1. Zadaj svoje \xFAdaje, niektor\xE9 m\xF4\u017Ee\u0161 vynecha\u0165',
+        '1. Zadaj svoje \xFAdaje do formul\xE1ra, niektor\xE9 m\xF4\u017Ee\u0161 vynecha\u0165',
         React.createElement('br', null),
         '2. Klikni dovn\xFAtra \u010Diarkovanej plochy',
         React.createElement('br', null),

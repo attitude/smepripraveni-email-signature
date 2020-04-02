@@ -2,9 +2,9 @@
 
 function App () {
   const [name, setName] = React.useState('Jožko Mrkvička')
-  const [position, setPosition] = React.useState('coordinator of happiness')
-  const [phoneNumber, setPhoneNumber] = React.useState('+421 949 900 900')
-  const [email, setEmail] = React.useState('kontakt@smepripraveni.sk')
+  const [position, setPosition] = React.useState('')
+  const [phoneNumber, setPhoneNumber] = React.useState('')
+  const [email, setEmail] = React.useState('')
 
   const onNameChange = React.useCallback((event) => setName(event.target.value))
   const onPositionChange = React.useCallback((event) => setPosition(event.target.value))
@@ -62,7 +62,7 @@ function App () {
       </div>
       <div className="panel">
         <p class="hint">
-          1. Zadaj svoje údaje, niektoré môžeš vynechať<br />
+          1. Zadaj svoje údaje do formulára, niektoré môžeš vynechať<br />
           2. Klikni dovnútra čiarkovanej plochy<br />
           3. Vyber všetko (Cmd + A / Ctr + A)<br />
           4. Skopíruj označený obsah (Cmd + C / Ctrl + C)<br />
