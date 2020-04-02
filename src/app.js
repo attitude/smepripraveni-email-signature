@@ -1,7 +1,7 @@
 'use strict';
 
 function App () {
-  const [name, setName] = React.useState('Jožko Mrkvička')
+  const [name, setName] = React.useState('')
   const [position, setPosition] = React.useState('')
   const [phoneNumber, setPhoneNumber] = React.useState('')
   const [email, setEmail] = React.useState('')
