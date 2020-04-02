@@ -27,6 +27,7 @@ function App () {
             <label>Meno: </label>
             <input
               name="name"
+              placeholder="Zadaj svoje celé meno"
               value={name}
               onChange={onNameChange}
             />
@@ -35,7 +36,8 @@ function App () {
           <div className="field">
             <label>Pozícia: </label>
             <input
-              name="name"
+              name="position"
+              placeholder="Zadaj svoju pozíciu, napr. koordinátor"
               value={position}
               onChange={onPositionChange}
             />
@@ -45,6 +47,7 @@ function App () {
             <label>Tel. číslo: </label>
             <input
               name="phone-number"
+              placeholder="Zadaj telefónne číslo"
               value={phoneNumber}
               onChange={onPhoneNumberChange}
             />
@@ -54,6 +57,7 @@ function App () {
             <label>email: </label>
             <input
               name="email"
+              placeholder="Zadaj svoj@email"
               value={email}
               onChange={onEmailChange}
             />

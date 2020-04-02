@@ -59,6 +59,7 @@ function App() {
           ),
           React.createElement('input', {
             name: 'name',
+            placeholder: 'Zadaj svoje cel\xE9 meno',
             value: name,
             onChange: onNameChange
           })
@@ -72,7 +73,8 @@ function App() {
             'Poz\xEDcia: '
           ),
           React.createElement('input', {
-            name: 'name',
+            name: 'position',
+            placeholder: 'Zadaj svoju poz\xEDciu, napr. koordin\xE1tor',
             value: position,
             onChange: onPositionChange
           })
@@ -87,6 +89,7 @@ function App() {
           ),
           React.createElement('input', {
             name: 'phone-number',
+            placeholder: 'Zadaj telef\xF3nne \u010D\xEDslo',
             value: phoneNumber,
             onChange: onPhoneNumberChange
           })
@@ -101,6 +104,7 @@ function App() {
           ),
           React.createElement('input', {
             name: 'email',
+            placeholder: 'Zadaj svoj@email',
             value: email,
             onChange: onEmailChange
           })
